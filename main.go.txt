@@ -1,0 +1,48 @@
+package main
+
+import (
+	"fmt"
+)
+
+//imports above are used to import packages from standard lib or extern
+
+//variables are declared outside of functions and are accessible to all functions.
+var sizeEath float64 = 12742
+const nome string = "my name is joao"
+var idade int = 19
+//isso é declaração explicita
+const (statusAtivo = true; statusInativo = false) 
+//constantes podem ser declaradas em bloco
+	
+//var f,o,d,a,s,e = "foda-se", "flamengo", "coisa", "qualquer", "nageda", "seila"
+// declaracao curta (inferencia d tipo) 
+// é feita dentro de funções, não pode ser usada fora delas
+
+//======== DECLARANDO OUTRAS FUNCOES ==============
+
+var a,s,d int
+func tipos() { 
+	fmt.Println(sizeEath)
+	
+
+
+}
+func paraBytesAndBits() {
+	// estudo profundo de arquitetura e funcionamento de memoria
+	
+}
+
+func main() {
+
+	linguagem := "go"
+	ano := 104
+	fmt.Println(idade)
+	fmt.Println(linguagem)
+	fmt.Println(ano)
+	fmt.Printf("%s %d - %s (%d)\n", nome, idade, linguagem, ano)
+	//printf é usado pra formatar a saida com variaveis, como em C
+
+	//======== complicaded things ==============
+	tipos()
+
+}
