@@ -33,3 +33,18 @@ import (
 scanln é simples, pra ler uma linha inteira com espaços, use: bufio
 ## IDEIA DE PROJETO GOLANG PRA MAIOR ESTRUTURA NO LONGO PRAZO:
 
+<hr>
+
+# PROJETO: MICRO REATOR
+### IDEIA
+**usar diferentes tipos de entradas (uint8/16/32æ64) para controlar um reator**
+*o projeto precisa manter ele instavel, ele vai ter seus valores alterados constantemente de acordo com um array*
+*preciso: digitar numeros especificos de cada tipo quando o terminal pedir*
+<strong>EXEMPLO</strong>
+```bash
+reator em 34% estabilize com um uint64 valido:
+resposta: algum numero valido no valor de 64bits nao sinalizado
+reator: verificando tipos...
+reator: reator ok!
+```
+<hr>
