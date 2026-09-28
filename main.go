@@ -1,66 +1,54 @@
 package main
 
 import "fmt"
-//some variables with different types
-	var age uint32 = 30
-	var salary float64 = 4582.32
-	var height float32 = 1.75
-	var isActive bool = true
-	var name string = "joao"
-	
-type Person struct {
 
-}
-//struct to remember
 
-func number() {
-	//function that processes a lot of numbers and manipulate them
-}
-func pointer(n *int) {
-	//just for pointers
-	*n *= 2
-	fmt.Println(n)
-	fmt.Println(*n)
-}
+var a int = 10
+var b int = 20
+var c uint16 = 30
+var d uint8 = 40
+var e uint64 = 50
+
+var f int64 = 60
+var g int32 = 70
+var h int16 = 80
+var i int8 = 90
+
+const name string = "joao"
+var array [5]int = [5]int{1, 2, 3, 4, 5}
+
+var slice []int = []int{1, 2, 3, 4, 5} //slice é um vetor dinamico
+var portas []int = []int{80, 443, 8080}
+
+
+
+var nome string
 func main() {
-	fmt.Println("running")
-	x := 10
-	p := &x
+	fmt.Println("rodano")
+	if a > b {
+		fmt.Println("a é maior que b")
+	}
 
-	fmt.Println(p) //memory address of x
-	fmt.Println(*p) //x value
+	fmt.Println(array[2])
+	fmt.Println(slice[4])	
+	slice = append(slice, 6)
+	fmt.Println(slice[5])
+	array[2] = 10
+	fmt.Println(array[2])
+	
+	for i := 0; i < len(portas); i++ {
+		fmt.Println(portas[i])
+	}
 
-	*p = 20 //change the value of x through the pointer
-	fmt.Println(x) //x value after change
-	pointer(&x) //call the pointer function with the address of x
-	//deve ser apenas com o endereço de memoria
-	fmt.Println(oi())
-}
-func oi() string {
-	return "oi"
-}
-type Animal interface {
-	Som() string
-}
-type Cachorro struct{}
-type Gato struct{}
+    fmt.Println("rodando")
+    fmt.Print("qual seu nome?: ")
+    _, err := fmt.Scanln(&nome)
+    if err != nil {
+        fmt.Println("erro ao ler:", err)
+        return
+    }
 
-func (Cachorro) Som() string { return "AuAu!"}
-func (Gato) Som() string { return "Miau!"}
-/*
-interface é um tipo que define um conjunto de métodos. 
-Um tipo implementa uma interface se ele possui todos os métodos 
-definidos na interface. No exemplo acima, a interface Animal define um método Som(), 
-e as structs Cachorro e Gato implementam esse método.
-Isso permite que você trate diferentes tipos de animais de forma uniforme, chamando o
-método Som() em qualquer instância de Animal, independentemente de ser um Cachorro ou um Gato.
-*/
-func emitirSom(a Animal) {
-	fmt.Println(a.Som())
-}
-// interface vazia (aceita qualquer tipo de dado)
-func interfaces(v interface{}) {
-	fmt.Println(v)
-}
+    fmt.Println("opa: ", nome)
+	
 
-//goroutines, interfaces, concorrencia, channels
+}
